@@ -1,6 +1,14 @@
 import tkinter as tk
 
 
+def calculate(expression):
+    try:
+        result = eval(expression)
+        return str(result)
+    except Exception:
+        return "Error"
+
+
 class Calculator:
     def __init__(self, root):
         self.root = root
@@ -37,15 +45,10 @@ class Calculator:
             self.expression = ""
             self.display.delete(0, tk.END)
         elif value == "=":
-            try:
-                result = eval(self.expression)
-                self.display.delete(0, tk.END)
-                self.display.insert(0, str(result))
-                self.expression = str(result)
-            except Exception:
-                self.display.delete(0, tk.END)
-                self.display.insert(0, "Error")
-                self.expression = ""
+            result = calculate(self.expression)
+            self.display.delete(0, tk.END)
+            self.display.insert(0, result)
+            self.expression = result if result != "Error" else ""
         else:
             self.expression += value
             self.display.delete(0, tk.END)
