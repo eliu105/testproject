@@ -23,6 +23,12 @@ python3 -m unittest test_calculator.py -v
 python3 -m unittest test_calculator.TestCalculate.test_addition -v
 ```
 
+## Coding Conventions
+
+- Always work on a feature branch — never commit directly to `main`.
+- Run tests before every commit: `python3 -m unittest test_calculator.py -v`
+- Open a pull request to merge feature branches into `main`.
+
 ## Architecture
 
 The logic is split into two layers:
