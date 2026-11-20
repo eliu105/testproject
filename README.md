@@ -1,6 +1,10 @@
 # Calculator App
 
-A simple GUI calculator built with Python and tkinter.
+A simple GUI calculator built with Python and tkinter. This is to help beginner learn vibe coding in Claude.
+
+## Description
+
+This calculator app provides a graphical interface for performing basic arithmetic operations. It supports addition, subtraction, multiplication, and division, including decimal numbers and chained expressions. The app is built with Python's built-in tkinter library, so no external dependencies are needed.
 
 ## Requirements
 
